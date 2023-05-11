@@ -1,5 +1,5 @@
 const path = require('path');
-const  express = require('express');
+const express = require('express');
 const session = require('express-session');
 const routes = require('./controllers');
 
@@ -30,7 +30,7 @@ app.engine('handlebars', hbs.engin);
 app.set('view engin', 'handlebars');
 
 app.use(express.json());
-app.use(express.urlencoded({ extend: false }));
+app.use(express.urlencoded({ extend: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
